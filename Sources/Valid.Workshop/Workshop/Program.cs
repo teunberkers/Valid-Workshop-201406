@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 
 namespace Workshop
 {
@@ -11,6 +12,12 @@ namespace Workshop
         static void Main(string[] args)
         {
             var result = DoSomeWork();
+ 	    
+	        Console.BackgroundColor = ConsoleColor.DarkBlue;
+            //fixed - yellow was not accepted...try white
+           // Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("This is an emergency Fix");
             Console.WriteLine("Result={0}", result);
             Console.BackgroundColor = ConsoleColor.Blue;
             Console.ReadKey();
@@ -23,10 +30,17 @@ namespace Workshop
         /// <returns>Integer that represents a fibonacci figure</returns>
         static int DoSomeWork()
         {
-            Func<int, int> fib = null; 
-            fib = x => x > 1 ? fib(x - 1) + fib(x - 2) : x;
+            var tsk = new Task<int>(() =>
+            {
+                Func<int, int> fib = null;
+                fib = x => x > 1 ? fib(x - 1) + fib(x - 2) : x;
 
-            return fib(25);
+                return fib(25);
+            });
+
+            tsk.Start();
+            tsk.Wait();
+            return tsk.Result;
         }
     }
 }
