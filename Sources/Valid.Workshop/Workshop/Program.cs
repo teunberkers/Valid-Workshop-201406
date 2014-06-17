@@ -44,9 +44,14 @@ namespace Workshop
             return tsk.Result;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public string RobertsMethod()
         {
             return "hoi robert";
+           
         }
     }
 }
