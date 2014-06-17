@@ -10,7 +10,7 @@ namespace Workshop
             Console.WriteLine("Result={0}", result);
 
             Console.ReadKey();
-
+            Console.WriteLine("Nice new feature.. by Roger");
         }
 
         static int DoSomeWork()
