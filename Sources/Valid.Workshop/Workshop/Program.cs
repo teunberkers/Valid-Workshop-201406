@@ -20,5 +20,10 @@ namespace Workshop
 
             return fib(25);
         }
+
+        public string RobertsMethod()
+        {
+            return "hoi robert";
+        }
     }
 }
