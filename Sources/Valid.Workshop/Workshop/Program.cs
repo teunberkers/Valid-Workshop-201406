@@ -45,7 +45,7 @@ namespace Workshop
 
         public string RobertsMethod()
         {
-            return "hoi";
+            return "hoi robert";
         }
     }
 }
