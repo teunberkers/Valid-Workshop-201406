@@ -16,6 +16,7 @@ namespace Workshop
 
         static int DoSomeWork()
         {
+            // Commetaar vergeten voor release. nu wel toegevoegd.
             var tsk = new Task<int>(() =>
             {
                 Func<int, int> fib = null;
