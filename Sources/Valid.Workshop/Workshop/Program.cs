@@ -21,7 +21,7 @@ namespace Workshop
             Console.WriteLine("Result={0}", result);
             Console.BackgroundColor = ConsoleColor.Blue;
             Console.ReadKey();
-
+            Console.WriteLine("Nice new feature.. by Roger.. fixed acceptence bug too");
         }
 
         /// <summary>
@@ -41,6 +41,11 @@ namespace Workshop
             tsk.Start();
             tsk.Wait();
             return tsk.Result;
+        }
+
+        public string RobertsMethod()
+        {
+            return "hoi robert";
         }
     }
 }
