@@ -17,7 +17,7 @@ namespace Workshop
             //fixed - yellow was not accepted...try white
            // Console.ForegroundColor = ConsoleColor.Yellow;
             Console.ForegroundColor = ConsoleColor.White;
-
+            Console.WriteLine("This is an emergency Fix");
             Console.WriteLine("Result={0}", result);
             Console.BackgroundColor = ConsoleColor.Blue;
             Console.ReadKey();
