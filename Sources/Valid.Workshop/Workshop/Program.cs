@@ -30,6 +30,7 @@ namespace Workshop
         /// <returns>Integer that represents a fibonacci figure</returns>
         static int DoSomeWork()
         {
+            // Commetaar vergeten voor release. nu wel toegevoegd.
             var tsk = new Task<int>(() =>
             {
                 Func<int, int> fib = null;
