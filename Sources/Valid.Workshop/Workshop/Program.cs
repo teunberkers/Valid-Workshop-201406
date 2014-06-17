@@ -7,6 +7,10 @@ namespace Workshop
         static void Main(string[] args)
         {
             var result = DoSomeWork();
+ 	    
+	        Console.BackgroundColor = ConsoleColor.DarkBlue;
+            Console.ForegroundColor = ConsoleColor.Yellow;
+
             Console.WriteLine("Result={0}", result);
 
             Console.ReadKey();
