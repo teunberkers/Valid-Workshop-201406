@@ -12,7 +12,7 @@ namespace Workshop
         {
             var result = DoSomeWork();
             Console.WriteLine("Result={0}", result);
-
+            Console.BackgroundColor = ConsoleColor.Blue;
             Console.ReadKey();
 
         }
