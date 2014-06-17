@@ -7,6 +7,12 @@ namespace Workshop
         static void Main(string[] args)
         {
             var result = DoSomeWork();
+ 	    
+	        Console.BackgroundColor = ConsoleColor.DarkBlue;
+            //fixed - yellow was not accepted...try white
+           // Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.ForegroundColor = ConsoleColor.White;
+
             Console.WriteLine("Result={0}", result);
 
             Console.ReadKey();
