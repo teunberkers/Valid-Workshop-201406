@@ -9,7 +9,9 @@ namespace Workshop
             var result = DoSomeWork();
  	    
 	        Console.BackgroundColor = ConsoleColor.DarkBlue;
-            Console.ForegroundColor = ConsoleColor.Yellow;
+            //fixed - yellow was not accepted...try white
+           // Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.ForegroundColor = ConsoleColor.White;
 
             Console.WriteLine("Result={0}", result);
 
