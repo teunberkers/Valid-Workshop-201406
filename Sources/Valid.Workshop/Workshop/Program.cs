@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 
 namespace Workshop
 {
@@ -15,10 +16,17 @@ namespace Workshop
 
         static int DoSomeWork()
         {
-            Func<int, int> fib = null; 
-            fib = x => x > 1 ? fib(x - 1) + fib(x - 2) : x;
+            var tsk = new Task<int>(() =>
+            {
+                Func<int, int> fib = null;
+                fib = x => x > 1 ? fib(x - 1) + fib(x - 2) : x;
 
-            return fib(25);
+                return fib(25);
+            });
+
+            tsk.Start();
+            tsk.Wait();
+            return tsk.Result;
         }
     }
 }
